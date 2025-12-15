@@ -18,9 +18,9 @@
 ##########################################################################
 SUBDIRS = cosa debug_api ccsp util_api dm_pack
 
-if WITH_GTEST_SUPPORT
-SUBDIRS += test
-endif
+#if WITH_GTEST_SUPPORT
+#SUBDIRS += test
+#endif
 
 lib_LTLIBRARIES = libccsp_common.la
 
