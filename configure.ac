@@ -24,7 +24,7 @@ AC_PREREQ([2.65])
 AC_INIT([ccsp_common], [1.0], [BUG-REPORT-ADDRESS])
 AM_INIT_AUTOMAKE
 LT_INIT
-GTEST_ENABLE_FLAG = ""
+#GTEST_ENABLE_FLAG = ""
 
 AC_ARG_ENABLE([gtestapp],
              AS_HELP_STRING([--enable-gtestapp],[enable Gtest support (default is no)]),
