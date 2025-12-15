@@ -26,19 +26,19 @@ AM_INIT_AUTOMAKE
 LT_INIT
 #GTEST_ENABLE_FLAG = ""
 
-AC_ARG_ENABLE([gtestapp],
-             AS_HELP_STRING([--enable-gtestapp],[enable Gtest support (default is no)]),
-             [
-               case "${enableval}" in
-                yes) GTEST_SUPPORT_ENABLED=true
-                     GTEST_ENABLE_FLAG="-DGTEST_ENABLE"
-                     m4_if(m4_sysval,[0],[AC_CONFIG_FILES([source/test/Makefile])]);;
-                no) GTEST_SUPPORT_ENABLED=false AC_MSG_ERROR([Gtest support is disabled]);;
-                 *) AC_MSG_ERROR([bad value ${enableval} for --enable-gtestapp ]);;
-               esac
-             ],
-             [echo "Gtestapp is disabled"])
-AM_CONDITIONAL([WITH_GTEST_SUPPORT], [test x$GTEST_SUPPORT_ENABLED = xtrue])
+#AC_ARG_ENABLE([gtestapp],
+#             AS_HELP_STRING([--enable-gtestapp],[enable Gtest support (default is no)]),
+#             [
+#               case "${enableval}" in
+#                yes) GTEST_SUPPORT_ENABLED=true
+#                     GTEST_ENABLE_FLAG="-DGTEST_ENABLE"
+#                     m4_if(m4_sysval,[0],[AC_CONFIG_FILES([source/test/Makefile])]);;
+#                no) GTEST_SUPPORT_ENABLED=false AC_MSG_ERROR([Gtest support is disabled]);;
+#                 *) AC_MSG_ERROR([bad value ${enableval} for --enable-gtestapp ]);;
+#               esac
+#             ],
+#             [echo "Gtestapp is disabled"])
+#AM_CONDITIONAL([WITH_GTEST_SUPPORT], [test x$GTEST_SUPPORT_ENABLED = xtrue])
 
 AC_PREFIX_DEFAULT(`pwd`)
 AC_ENABLE_SHARED
